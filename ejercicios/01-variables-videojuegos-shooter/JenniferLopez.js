@@ -18,9 +18,12 @@ console.log("El estado de tu partida es: " , estado);
 
  console.log("\nEntrando en combate..\n");
  municion=municion-25;
- vida=vida-80;
+ vida=vida-100;
  console.log("Disparaste tu arma, te quedan " , municion , " balas");
  console.log("Has sido atacado, tu vida actual es: " , vida);
  estado="En peligro";
 console.log("El estado de tu partida es: " , estado);
+//estado del jugador
+let jugadorEliminado = vida <= 0;
+console.log("¿Jugador eliminado?: " + jugadorEliminado);
 console.log("\n--COMBATE FINALIZADO--\n");
