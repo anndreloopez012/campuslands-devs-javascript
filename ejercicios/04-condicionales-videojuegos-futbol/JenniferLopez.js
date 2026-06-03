@@ -13,3 +13,11 @@ else if (golEquipo1 === golEquipo2) {
 else {
     console.log(" ¡DERROTA para el Barcelona! No suma puntos en esta jornada.");
 }
+
+console.log("\n--- REPORTE DEL MÁNAGER  ---");
+
+if (golEquipo1 - golEquipo2 >= 3) {
+    console.log("¡Increible! El equipo dio una goleada histórica.");
+} else {
+    console.log("Partido cerrado. Buen esfuerzo en la cancha.");
+}
