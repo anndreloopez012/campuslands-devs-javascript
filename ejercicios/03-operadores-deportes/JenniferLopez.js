@@ -1,7 +1,17 @@
 // Ejercicio 03: Operadores matematicos - deportes
-// Completa el codigo siguiendo las instrucciones del README.md.
-
 console.log("Ejercicio 03: Operadores matematicos");
 
-// Escribe tu solucion aqui.
+const puntosGanador = 102;
+const puntosPerdedor = 88;
+const triplesAnotados = 12;
 
+//resultados
+console.log("\n--- ESTADÍSTICAS DEL PARTIDO --- ");
+
+console.log(`Marcador Final: ${puntosGanador} - ${puntosPerdedor}`);
+console.log(`Total de puntos anotados: ${puntosGanador + puntosPerdedor}`); 
+console.log(`Diferencia de puntos: ${puntosGanador - puntosPerdedor}`); 
+console.log(`Puntos anotados en triples: ${triplesAnotados * 3}`);
+console.log(`Promedio de puntos (Ganador): ${puntosGanador / 4}`); // División
+
+console.log(`¿El puntaje del ganador es par?: ${puntosGanador % 2 === 0}`); // Módulo
