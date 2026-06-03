@@ -17,3 +17,10 @@ console.log(`¿Tiene ABS?: ${tieneFrenosAbs} | Tipo de dato: ${typeof tieneFreno
 console.log(`Propietario anterior: ${propietarioAnterior} | Tipo de dato: ${typeof propietarioAnterior}`);
 console.log(`Próximo mantenimiento: ${proximoMantenimiento} | Tipo de dato: ${typeof proximoMantenimiento}`);
 console.log(`Colores de fábrica: ${Disponibles} | Tipo de dato: ${typeof Disponibles}`);
+
+console.log("\n---Caracteristicas de la moto---");
+
+const esAltaCilindrada = cilindraje >= 600; 
+
+console.log(`¿Es considerada de alta cilindrada?: ${esAltaCilindrada}`);
+console.log(`Primer color disponible: ${Disponibles[0]}`);
