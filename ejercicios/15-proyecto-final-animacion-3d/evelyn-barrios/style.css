@@ -25,36 +25,40 @@ body {
     cursor: pointer;
   }
   
-  .cube {
-    width: 96px;
-    height: 96px;
-    margin: 20px auto;
-    background: #19a974;
-    transform: rotateX(20deg) rotateY(35deg);
+  /* Nueva forma: Cristal Diamante */
+  .crystal {
+    width: 60px;
+    height: 60px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #00f2ff, #0066ff);
+    transform: rotate(45deg);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+    transition: all 0.5s ease;
   }
   
-  .tower {
-    width: 54px;
-    height: 140px;
-    margin: 0 auto;
-    background: #ffb020;
+  /* Nueva forma: Plataforma base */
+  .platform {
+    width: 120px;
+    height: 10px;
+    margin: 10px auto 30px;
+    background: #333;
+    border-radius: 50%;
+    opacity: 0.3;
   }
 
-/* Animaciones para el proyecto integrador */
-.animating-cube {
-  animation: rotate3D 6s linear infinite;
+/* Animación de levitación única */
+.active-crystal {
+  animation: floatCrystal 2s ease-in-out infinite;
+  filter: hue-rotate(90deg) brightness(1.2);
 }
 
-.animating-tower {
-  animation: pulseTower 2s ease-in-out infinite;
-}
-
-@keyframes rotate3D {
-  from { transform: rotateX(20deg) rotateY(35deg) rotateZ(0deg); }
-  to { transform: rotateX(380deg) rotateY(395deg) rotateZ(360deg); }
-}
-
-@keyframes pulseTower {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.8; }
+@keyframes floatCrystal {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-20px);
+    box-shadow: 0 25px 30px rgba(0, 242, 255, 0.2);
+  }
 }

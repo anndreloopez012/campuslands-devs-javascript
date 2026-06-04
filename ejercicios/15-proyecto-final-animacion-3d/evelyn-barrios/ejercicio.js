@@ -4,21 +4,16 @@ console.log("--- Proyecto Integrador: Animacion 3D ---");
 
 // Escribe tu solucion aqui.
 const btnToggle = document.getElementById('toggle');
-const cube = document.querySelector('.cube');
-const tower = document.querySelector('.tower');
+const crystal = document.querySelector('.crystal');
 
-if (btnToggle && cube && tower) {
+if (btnToggle && crystal) {
     btnToggle.addEventListener('click', () => {
-        // Alternamos las clases de CSS que contienen las animaciones
-        cube.classList.toggle('animating-cube');
-        tower.classList.toggle('animating-tower');
+        const isActive = crystal.classList.toggle('active-crystal');
 
-        if (cube.classList.contains('animating-cube')) {
-            btnToggle.textContent = "Detener Animacion";
-            console.log("Estado: Animacion en ejecucion.");
-        } else {
-            btnToggle.textContent = "Animar";
-            console.log("Estado: Animacion pausada.");
-        }
+        btnToggle.textContent = isActive ? "Desactivar" : "Activar Energía";
+        
+        console.log(isActive 
+            ? "Energía fluyendo: Cristal levitando." 
+            : "Energía disipada: Cristal en reposo.");
     });
 }
