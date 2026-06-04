@@ -20,10 +20,15 @@ barraVelocidad.max = "350";
 barraVelocidad.value = "0";
 panel.insertBefore(barraVelocidad, boton);
 
-
 barraVelocidad.addEventListener("input", (evento) => {
     velocidadActual = evento.target.value; 
-    descripcion.textContent = `Modelo: ${modeloActual} | Velocidad: ${velocidadActual} km/h`;
+
+    let mensajeReto = "";
+    if (velocidadActual > 300) {
+        mensajeReto = "  ¡Alerón activo! Modo Pista";
+    }
+
+    descripcion.textContent = `Modelo: ${modeloActual} | Velocidad: ${velocidadActual} km/h${mensajeReto}`;
 });
 
 boton.addEventListener("click", () => {
@@ -32,8 +37,9 @@ boton.addEventListener("click", () => {
         panel.style.background = "#fff2cc"; 
     } else {
         modeloActual = "Ferrari";
-        panel.style.background = "#ffcccc"; 
+        panel.style.background = "#ffcccc";
     }
     
-    descripcion.textContent = `Modelo: ${modeloActual} | Velocidad: ${velocidadActual} km/h`;
+    let mensajeReto = velocidadActual > 300 ? "  ¡Alerón activo! Modo Pista" : "";
+    descripcion.textContent = `Modelo: ${modeloActual} | Velocidad: ${velocidadActual} km/h${mensajeReto}`;
 });
