@@ -4,24 +4,24 @@ body {
   display: grid;
   place-items: center;
   font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #17202a;
+  background: #000000;
+  color: #ffffff;
 }
 
-.panel, .scene {
+.panel {
   width: min(520px, 92vw);
   padding: 24px;
-  border: 1px solid #d7dde8;
+  border: 1px solid #ffffff;
   border-radius: 8px;
-  background: white;
+  background: rgb(141, 181, 216);
 }
 
 button {
   padding: 10px 14px;
   border: 0;
   border-radius: 6px;
-  background: #1463ff;
-  color: white;
+  background: #a96f98;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -29,14 +29,6 @@ button {
   width: 96px;
   height: 96px;
   margin: 20px auto;
-  background: #19a974;
+  background: #749ec9;
   transform: rotateX(20deg) rotateY(35deg);
 }
-
-.tower {
-  width: 54px;
-  height: 140px;
-  margin: 0 auto;
-  background: #ffb020;
-}
-
