@@ -40,3 +40,6 @@ button {
   background: #ffb020;
 }
 
+.cube, .tower {
+  transition: transform 0.5s ease-in-out;
+}
