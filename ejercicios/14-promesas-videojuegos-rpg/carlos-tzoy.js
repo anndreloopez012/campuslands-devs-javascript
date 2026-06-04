@@ -1,37 +1,36 @@
-const abrircofre = () =>{
+const abrircofre = () => {
     return new Promise((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             const llave = true
-            if(llave){
+            if (llave) {
                 resolve("¡¡ abriendo cofre !!")
-            }else{
+            } else {
                 reject("¡¡ sin la llave del cofre !!")
             }
-        },2000)
+        }, 2000)
     })
 }
 
-const obtenerRecurso = () =>{
+const obtenerRecurso = () => {
     return new Promise((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             const abierto = true
-            if(abierto){
+            if (abierto) {
                 resolve("¡¡ obtuvistes 50 monedas de oro !!")
-            }else{
+            } else {
                 reject("¡¡ sin la llave del cofre !!")
             }
-        },3000)
+        }, 3000)
     })
 }
 
-const ejecutar = async () =>{
+const ejecutar = async () => {
     try {
         console.log("PJ1 intenta abrir cofre")
         const abrir = await abrircofre()
-        const recurso = await obtenerRecurso()
         console.log(abrir)
+        const recurso = await obtenerRecurso()
         console.log(recurso)
-        
     } catch (error) {
         console.error(error)
     }
