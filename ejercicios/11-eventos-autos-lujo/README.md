@@ -1,17 +1,4 @@
-# 11. Eventos - autos de lujo
-
-## 🟦 Objetivo
-
-Controlar una ficha interactiva de autos de lujo.
-
-## 🟩 Instrucciones
-
-Abre `ejercicio.js` y prueba el resultado desde `index.html` en el navegador. escucha clicks y cambios para actualizar modelo, velocidad y color.
-
-## 🟨 Pistas
-
-- Divide el problema en pasos pequenos.
-- Usa `console.log` para revisar valores intermedios.
+# alores intermedios.
 - Revisa el nombre exacto de variables, funciones y selectores.
 
 ## 🟥 Reglas
@@ -36,3 +23,17 @@ El programa debe mostrar un resultado claro y coherente con el tema de autos de 
 - input
 - DOM
 
+11. Eventos - autos de lujo
+
+## 🟦 Objetivo
+
+Controlar una ficha interactiva de autos de lujo.
+
+## 🟩 Instrucciones
+
+Abre `ejercicio.js` y prueba el resultado desde `index.html` en el navegador. escucha clicks y cambios para actualizar modelo, velocidad y color.
+
+## 🟨 Pistas
+
+- Divide el problema en pasos pequenos.
+- Usa `console.log` para revisar v
