@@ -9,14 +9,7 @@ console.log("Ejercicio 11: Eventos");
 const titulo = document.querySelector("#titulo");
 const selector = document.querySelector("#selectorModelo");
 const btnActualizar = document.querySelector("#btnActualizar");
-
-// Escuchar el evento
-btnActualizar.addEventListener("click", () => {
-    const modeloElegido = selector.value;
-    
-    titulo.textContent = `Auto seleccionado: ${modeloElegido}`;
-    console.log("El usuario eligió:", modeloElegido);
-});
+const visualizador = document.querySelector("#visualizador");
 
 // Reto Extra
 const configuraciones = {
@@ -25,9 +18,15 @@ const configuraciones = {
     "Porsche": "#2e2e2e"
 };
 
-// Evento
+// Escuchar el evento
 btnActualizar.addEventListener("click", () => {
     const modeloElegido = selector.value;
+    
+    // actualizamos titulo
+    titulo.textContent = `Auto seleccionado: ${modeloElegido}`;
+    console.log("El usuario eligió:", modeloElegido);
+
+    // color base
     const colorSeleccionado = configuraciones[modeloElegido] || "#19a974";
     visualizador.style.backgroundColor = colorSeleccionado;
 });
