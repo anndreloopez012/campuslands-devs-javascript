@@ -1,14 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ejercicio 10</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 10 - DOM básico: Dibujo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="panel"><h1 id="titulo">Ejercicio interactivo</h1><p id="descripcion">Completa el JavaScript.</p><button id="accion">Probar</button></main>
+
+  <div class="pagina">
+    <h1 class="titulo-pagina">🎨 Galería de Dibujo</h1>
+
+    <div id="tarjeta" class="tarjeta">
+      <div class="tarjeta-imagen">🖼️</div>
+
+      <div class="tarjeta-cuerpo">
+        <h2 id="titulo-obra" class="titulo-obra">Sin título</h2>
+        <p id="artista" class="artista">Artista desconocido</p>
+        <p id="tecnica" class="tecnica">Técnica: —</p>
+        <p id="anio" class="anio">Año: —</p>
+      </div>
+
+      <div class="tarjeta-pie">
+        <span id="etiqueta-estado" class="etiqueta">Disponible</span>
+        <button id="btn-toggle" class="boton">Marcar como vendida</button>
+      </div>
+    </div>
+
+    <div id="validacion" class="validacion oculto">
+      <p id="mensaje-validacion"></p>
+    </div>
+  </div>
+
   <script src="ejercicio.js"></script>
 </body>
 </html>
-

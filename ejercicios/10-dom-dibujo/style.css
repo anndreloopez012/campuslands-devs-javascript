@@ -1,42 +1,165 @@
-body {
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f5f0ea;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #17202a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.panel, .scene {
-  width: min(520px, 92vw);
-  padding: 24px;
-  border: 1px solid #d7dde8;
+/* Página principal */
+.pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 20px;
+}
+
+.titulo-pagina {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #2c2c2c;
+  letter-spacing: 1px;
+}
+
+/* =============================================
+   Tarjeta
+   ============================================= */
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  width: 320px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Área del ícono/imagen */
+.tarjeta-imagen {
+  background-color: #e8dfd4;
+  font-size: 5rem;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Cuerpo de la tarjeta */
+.tarjeta-cuerpo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titulo-obra {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.artista {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 700;
+}
+
+.tecnica,
+.anio {
+  font-size: 0.88rem;
+  color: #777;
+}
+
+/* Pie de la tarjeta */
+.tarjeta-pie {
+  padding: 16px 20px;
+  border-top: 1px solid #f0ebe4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Etiqueta de estado */
+.etiqueta {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: #d4edda;
+  color: #155724;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Clase que JS agrega cuando la obra está vendida */
+.etiqueta.vendida {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Clase que JS agrega a la tarjeta cuando está vendida */
+.tarjeta.obra-vendida {
+  border: 2px solid #f5c6cb;
+}
+
+/* Botón */
+.boton {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
   border-radius: 8px;
-  background: white;
-}
-
-button {
-  padding: 10px 14px;
-  border: 0;
-  border-radius: 6px;
-  background: #1463ff;
-  color: white;
+  font-size: 0.82rem;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.2s;
 }
 
-.cube {
-  width: 96px;
-  height: 96px;
-  margin: 20px auto;
-  background: #19a974;
-  transform: rotateX(20deg) rotateY(35deg);
+.boton:hover {
+  background-color: #5a5a5a;
 }
 
-.tower {
-  width: 54px;
-  height: 140px;
-  margin: 0 auto;
-  background: #ffb020;
+/* =============================================
+   Validación extra (reto extra)
+   ============================================= */
+.validacion {
+  background-color: #fff8e1;
+  border-left: 4px solid #f9a825;
+  border-radius: 8px;
+  padding: 12px 18px;
+  max-width: 320px;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #5d4037;
 }
 
+.validacion.error {
+  background-color: #fdecea;
+  border-left-color: #e53935;
+  color: #b71c1c;
+}
+
+.validacion.exito {
+  background-color: #e8f5e9;
+  border-left-color: #43a047;
+  color: #1b5e20;
+}
+
+/* Clase utilitaria para ocultar elementos */
+.oculto {
+  display: none;
+}

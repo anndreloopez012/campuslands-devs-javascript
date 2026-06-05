@@ -1,14 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ejercicio 11</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Ficha de Auto de Lujo</title>
+  <link rel="stylesheet" href="style.css" />
+ 
 </head>
 <body>
-  <main class="panel"><h1 id="titulo">Ejercicio interactivo</h1><p id="descripcion">Completa el JavaScript.</p><button id="accion">Probar</button></main>
+
+  <div class="ficha">
+    <h1>🏎️ AUTO DE LUJO</h1>
+
+    <label for="select-modelo">Modelo</label>
+    <select id="select-modelo">
+      <option value="Lamborghini Huracán">Lamborghini Huracán</option>
+      <option value="Ferrari 488">Ferrari 488</option>
+      <option value="Porsche 911 Turbo">Porsche 911 Turbo</option>
+      <option value="Bentley Continental GT">Bentley Continental GT</option>
+      <option value="Rolls-Royce Ghost">Rolls-Royce Ghost</option>
+    </select>
+
+    <label for="slider-velocidad">Velocidad máxima: <strong id="valor-velocidad">200</strong> km/h</label>
+    <input type="range" id="slider-velocidad" min="100" max="400" value="200" />
+
+    <label for="picker-color">Color del auto</label>
+    <input type="color" id="picker-color" value="#c9a227" />
+
+    <div class="resultado">
+      <p>Modelo: <span id="texto-modelo">Lamborghini Huracán</span></p>
+      <p>Velocidad: <span id="texto-velocidad">200 km/h</span> <span class="badge-velocidad" id="badge-vel">Normal</span></p>
+      <p>Color: <span id="texto-color">#c9a227</span> <span id="muestra-color" style="background:#c9a227;"></span></p>
+    </div>
+  </div>
+
   <script src="ejercicio.js"></script>
 </body>
 </html>
-
