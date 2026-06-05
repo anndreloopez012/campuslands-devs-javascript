@@ -40,3 +40,21 @@ button {
   background: #ffb020;
 }
 
+@keyframes giro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
+
+
+@keyframes desaparecer {
+  from{
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
