@@ -40,3 +40,31 @@ button {
   background: #ffb020;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotateX(20deg) rotateY(35deg);
+  }
+  to {
+    transform: rotateX(380deg) rotateY(395deg);
+    background-color: red;
+  }
+}
+
+.rotatingTower {
+  animation: rotate 3s linear;
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotateX(20deg) rotateY(35deg);
+  }
+  to {
+    transform: rotateX(-360deg) rotateY(-325deg);
+    background-color: #1463ff;
+  }
+}
+
+.rotatingCube {
+  animation: rotateReverse 3s linear;
+}
+
