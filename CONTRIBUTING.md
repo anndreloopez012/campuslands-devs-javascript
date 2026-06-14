@@ -27,7 +27,8 @@ En el Pull Request indica el ejercicio realizado, archivos modificados, pruebas 
 ## Que no deben hacer
 
 - No hacer push directo a `dev` ni a `main`.
-- No copiar soluciones desde `respuestas/` en los enunciados.
+- No trabajar sobre la rama `respuestas`; esa rama es solo de consulta del profesor.
+- No copiar soluciones oficiales en los enunciados.
 - No modificar archivos de otros estudiantes sin permiso.
 - No mezclar varios ejercicios sin indicarlo.
 - No subir `node_modules/`, archivos `.env` o builds generados.
@@ -40,3 +41,6 @@ Sube tu rama personal y abre Pull Request hacia `dev`. El administrador/owner re
 
 Las ramas `main` y `dev` estan protegidas. Los estudiantes trabajan en ramas propias. Solo el administrador/owner puede subir directo a `main` y `dev` sin revision cuando sea necesario.
 
+## Rama de respuestas
+
+La rama `respuestas` contiene las soluciones oficiales para consulta posterior. No es una rama de entrega ni de trabajo para estudiantes.

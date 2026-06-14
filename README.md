@@ -12,7 +12,7 @@ Repositorio base para estudiantes de JavaScript en Campuslands. Contiene 15 ejer
 
 ## Proposito
 
-Practicar JavaScript basico sin frameworks usando archivos pequenos, instrucciones claras y soluciones separadas. La rama estable es `main`; la rama de trabajo principal del curso es `dev`.
+Practicar JavaScript basico sin frameworks usando archivos pequenos, instrucciones claras y soluciones separadas. La rama estable es `main`; la rama de trabajo principal del curso es `dev`; las respuestas oficiales viven solo en la rama `respuestas`.
 
 ## Clonar el proyecto
 
@@ -88,6 +88,7 @@ En GitHub, crea un Pull Request desde tu rama personal hacia `dev`. Describe que
 
 - `main` esta protegida como rama estable.
 - `dev` esta protegida como rama principal de trabajo.
+- `respuestas` es una rama separada solo para consulta de soluciones oficiales.
 - Los estudiantes no deben hacer push directo a `main` ni a `dev`.
 - Los estudiantes trabajan solo en ramas propias.
 - El administrador/owner del repositorio puede subir directo a `main` y `dev` cuando sea necesario.
@@ -106,11 +107,28 @@ Agrega el usuario owner/administrador como actor autorizado para bypass.
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── .gitignore
-├── ejercicios/
-│   └── 01...15 carpetas de ejercicios
-└── respuestas/
-    └── 01-respuesta.js ... 15-respuesta.js
+└── ejercicios/
+    └── 01...15 carpetas de ejercicios
 ```
+
+## Rama de respuestas oficiales
+
+Las respuestas no estan en `main` ni en `dev`. Estan en una rama separada llamada `respuestas`.
+
+Para consultarlas despues de resolver los ejercicios:
+
+```bash
+git fetch origin
+git checkout respuestas
+```
+
+Para volver al trabajo normal:
+
+```bash
+git checkout dev
+```
+
+Esta rama es solo de consulta del profesor. Los estudiantes no deben trabajar ni abrir Pull Request desde `respuestas`.
 
 ## Buenas practicas basicas de JavaScript
 
@@ -120,4 +138,3 @@ Agrega el usuario owner/administrador como actor autorizado para bypass.
 - Prueba tu codigo antes de subirlo.
 - Lee los errores de consola con calma.
 - Mantén las soluciones fuera de los enunciados de ejercicios.
-
