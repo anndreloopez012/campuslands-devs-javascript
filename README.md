@@ -8,11 +8,11 @@
   </tr>
 </table>
 
-Repositorio base para estudiantes de JavaScript en Campuslands. Contiene 15 ejercicios progresivos con temas cercanos a videojuegos, motos, deportes, comida, viajes, ropa, musica, autos, paracaidismo, libros, peliculas y proyectos visuales.
+Repositorio base para estudiantes de JavaScript en Campuslands. Contiene ejercicios progresivos de nivel basico e intermedio con temas cercanos a videojuegos, motos, deportes, comida, viajes, ropa, musica, autos, paracaidismo, libros, peliculas y proyectos visuales.
 
 ## Proposito
 
-Practicar JavaScript basico sin frameworks usando archivos pequenos, instrucciones claras y soluciones separadas. La rama estable es `main`; la rama de trabajo principal del curso es `dev`; las respuestas oficiales viven solo en la rama `respuestas`.
+Practicar JavaScript sin frameworks usando archivos pequenos, instrucciones claras y soluciones separadas. La rama estable es `main`; la rama de trabajo principal del curso es `dev`; las respuestas oficiales viven solo en la rama `respuestas`.
 
 ## Clonar el proyecto
 
@@ -32,7 +32,7 @@ git pull origin dev
 
 1. Baja el repositorio y entra a `dev`.
 2. Crea tu rama personal con tu nombre.
-3. Resuelve el ejercicio indicado dentro de `ejercicios/`.
+3. Resuelve el ejercicio indicado dentro de la carpeta `resoluciones/nombre-apellido/` del ejercicio correspondiente.
 4. Prueba tu codigo en navegador o con Node.js segun corresponda.
 5. Guarda cambios con commit.
 6. Sube tu rama al remoto.
@@ -46,9 +46,9 @@ git checkout dev
 git pull origin dev
 git checkout -b juan-perez
 
-# trabajar el ejercicio
+# trabajar el ejercicio dentro de resoluciones/juan-perez/
 git status
-git add ejercicios/01-variables-videojuegos-shooter/ejercicio.js
+git add ejercicios/01-variables-videojuegos-shooter/resoluciones/juan-perez/
 git commit -m "feat: solve variables exercise"
 git push -u origin juan-perez
 ```
@@ -70,7 +70,21 @@ Ejemplos validos: `maria-gomez`, `carlos-rojas`, `ana-martinez`.
 
 ## Como trabajar un ejercicio
 
-Cada carpeta de `ejercicios/` incluye un `README.md` con objetivo, instrucciones, pistas, reglas, reto extra y resultado esperado. Edita principalmente `ejercicio.js`; si el ejercicio incluye `index.html` o `style.css`, abre el HTML en el navegador.
+Cada carpeta de ejercicio incluye un `README.md` con objetivo, instrucciones, pistas, reglas, reto extra y resultado esperado. Usa el archivo `ejercicio.js` como guia base, pero entrega tu solucion dentro de `resoluciones/nombre-apellido/`.
+
+Ejemplo para nivel basico:
+
+```text
+ejercicios/01-variables-videojuegos-shooter/resoluciones/juan-perez/
+```
+
+Ejemplo para nivel intermedio:
+
+```text
+intermedio/ejercicios/01-dashboard-kd-shooter/resoluciones/juan-perez/
+```
+
+No modifiques los archivos base del ejercicio (`README.md`, `ejercicio.js`, `index.html` o `style.css`) a menos que el profesor lo solicite.
 
 ## Commit y push
 
@@ -107,8 +121,12 @@ Agrega el usuario owner/administrador como actor autorizado para bypass.
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── .gitignore
-└── ejercicios/
-    └── 01...15 carpetas de ejercicios
+├── ejercicios/
+│   └── 01...15 carpetas de ejercicios basicos
+└── intermedio/
+    ├── README.md
+    └── ejercicios/
+        └── 01...80 carpetas de ejercicios intermedios
 ```
 
 ## Rama de respuestas oficiales
