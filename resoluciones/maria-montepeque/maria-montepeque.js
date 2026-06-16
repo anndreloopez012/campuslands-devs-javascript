@@ -1,31 +1,31 @@
-// Ejercicio 15: Proyecto integrador basico - animacion 3D, MOBA o diseno 3D arquitectura
+// Ejercicio 03: Operadores matematicos - deportes
+// Completa el codigo siguiendo las instrucciones del README.md.
 
-console.log("Ejercicio 15: Proyecto integrador basico");
+console.log("Ejercicio 03: Operadores matematicos");
 
 // Escribe tu solucion aqui.
 
-const cube = document.querySelector(".cube");
-const boton = document.querySelector("#toggle");
+const local = "Tigres",
+  visitante = "Aguilas";
+const ptsLocal = 89,
+  ptsVisitante = 76,
+  cuartos = 4;
 
-document.head.insertAdjacentHTML(
-  "beforeend",
-  `<style>
-  @keyframes girar { to { transform: rotateX(20deg) rotateY(395deg); } }
-  .cube.animando { animation: girar 2s linear infinite; }
-</style>`,
+const total = ptsLocal + ptsVisitante;
+const diferencia = ptsLocal - ptsVisitante;
+const promedio = ptsLocal / cuartos;
+const resto = ptsLocal % cuartos;
+const porcentaje = (ptsLocal / total) * 100;
+
+console.log(`${local} ${ptsLocal} - ${ptsVisitante} ${visitante}`);
+console.log(
+  `Total: ${total} | Diferencia: ${diferencia} | Promedio local/cuarto: ${promedio}`,
 );
-
-const colores = ["#19a974", "#1463ff", "#ff5c5c"];
-let i = 0,
-  animando = false;
-
-boton.addEventListener("click", () => {
-  animando = !animando;
-  cube.classList.toggle("animando", animando);
-  boton.textContent = animando ? "Detener" : "Animar";
-});
-
-cube.addEventListener("click", () => {
-  i = (i + 1) % colores.length;
-  cube.style.background = colores[i];
-});
+console.log(
+  `Resto (modulo): ${resto} | Porcentaje local: ${porcentaje.toFixed(1)}%`,
+);
+console.log(
+  ptsLocal === ptsVisitante
+    ? "Empate"
+    : `Gana ${ptsLocal > ptsVisitante ? local : visitante}`,
+);

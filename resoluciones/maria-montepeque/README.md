@@ -1,12 +1,12 @@
-# 15. Proyecto integrador basico - animacion 3D, MOBA o diseno 3D arquitectura
+# 03. Operadores matematicos - deportes
 
 ## 🟦 Objetivo
 
-Construir una escena visual basica combinando HTML, CSS y JavaScript.
+Calcular estadisticas basicas de un partido deportivo.
 
 ## 🟩 Instrucciones
 
-Abre `ejercicio.js` y prueba el resultado desde `index.html` en el navegador. crea una escena animada sencilla y controles basicos sin frameworks.
+Abre `ejercicio.js` y ejecutalo con Node.js o desde la consola del navegador. usa operadores para puntos, promedio, diferencia y porcentaje.
 
 ## 🟨 Pistas
 
@@ -23,18 +23,17 @@ Abre `ejercicio.js` y prueba el resultado desde `index.html` en el navegador. cr
 
 ## 🟪 Reto extra
 
-Agrega una validacion adicional o un dato extra relacionado con animacion 3D, MOBA o diseno 3D arquitectura.
+Agrega una validacion adicional o un dato extra relacionado con deportes.
 
 ## ✅ Resultado esperado
 
-El programa debe mostrar un resultado claro y coherente con el tema de animacion 3D, MOBA o diseno 3D arquitectura, sin errores en consola.
+El programa debe mostrar un resultado claro y coherente con el tema de deportes, sin errores en consola.
 
 ## Conceptos que practica
 
-- DOM
-- eventos
-- arrays
-- objetos
-- funciones
-- animacion con CSS
+- suma
+- resta
+- multiplicacion
+- division
+- modulo
 
