@@ -5,8 +5,7 @@ body {
   place-items: center;
   font-family: Arial, sans-serif;
   background: #f4f7fb;
-  color: #17202a;
-}
+  color: #17202a;}
 
 .panel, .scene {
   width: min(520px, 92vw);
