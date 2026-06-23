@@ -1,0 +1,109 @@
+// 01. Dashboard K/D de squad shooter
+
+const jugadores = [
+  { id: 1, nombre: 'Alpha',   bajas: 45, muertes: 10, asistencias: 8  },
+  { id: 2, nombre: 'Bravo',   bajas: 30, muertes: 15, asistencias: 12 },
+  { id: 3, nombre: 'Charlie', bajas: 20, muertes: 20, asistencias: 5  },
+  { id: 4, nombre: 'Delta',   bajas: 55, muertes: 8,  asistencias: 15 },
+  { id: 5, nombre: 'Echo',    bajas: 0,  muertes: 0,  asistencias: 0  }, 
+];
+
+function validarJugador(jugador) {
+  const campos = ['nombre', 'bajas', 'muertes', 'asistencias'];
+  return campos.every(campo => jugador[campo] !== undefined && jugador[campo] !== null);
+}
+
+function validarDatos(datos) {
+  if (!Array.isArray(datos) || datos.length === 0) {
+    throw new Error('El arreglo de jugadores está vacío o no es válido.');
+  }
+  datos.forEach((j, i) => {
+    if (!validarJugador(j)) throw new Error(`Jugador en índice ${i} tiene datos incompletos.`);
+  });
+}
+
+
+function calcularKD(bajas, muertes) {
+  if (muertes === 0) return bajas === 0 ? 0 : bajas;
+  return bajas / muertes;
+}
+
+function calcularParticipacion(bajas, asistencias, totalBajasEquipo) {
+  if (totalBajasEquipo === 0) return 0;
+  return ((bajas + asistencias) / totalBajasEquipo) * 100;
+}
+
+function enriquecerJugadores(datos) {
+  const totalBajas = datos.reduce((acc, j) => acc + j.bajas, 0);
+
+  return datos.map(j => ({
+    ...j,
+    kd:            parseFloat(calcularKD(j.bajas, j.muertes).toFixed(2)),
+    participacion: parseFloat(calcularParticipacion(j.bajas, j.asistencias, totalBajas).toFixed(1)),
+  }));
+}
+
+
+function ordenarPorKD(jugadores) {
+  return [...jugadores].sort((a, b) => b.kd - a.kd);
+}
+
+
+function calcularResumen(jugadores) {
+  const totalBajas      = jugadores.reduce((acc, j) => acc + j.bajas, 0);
+  const totalMuertes    = jugadores.reduce((acc, j) => acc + j.muertes, 0);
+  const totalAsistencias = jugadores.reduce((acc, j) => acc + j.asistencias, 0);
+  const kdEquipo        = parseFloat(calcularKD(totalBajas, totalMuertes).toFixed(2));
+  const mvp             = jugadores.reduce((a, b) => (a.kd >= b.kd ? a : b));
+
+  return { totalBajas, totalMuertes, totalAsistencias, kdEquipo, mvp: mvp.nombre };
+}
+
+
+function mostrarRanking(ranking) {
+  console.log('\n ══════════ RANKING K/D ══════════ ');
+  ranking.forEach((j, i) => {
+    console.log(
+      `#${i + 1} ${j.nombre.padEnd(10)} | K/D: ${String(j.kd).padStart(5)} | ` +
+      `Bajas: ${String(j.bajas).padStart(3)} | Muertes: ${String(j.muertes).padStart(3)} | ` +
+      `Asistencias: ${String(j.asistencias).padStart(3)} | Participación: ${j.participacion}%`
+    );
+  });
+}
+
+function mostrarResumen(resumen) {
+  console.log('\n ══════════ RESUMEN DEL EQUIPO ══════════');
+  console.log(`  Total bajas:       ${resumen.totalBajas}`);
+  console.log(`  Total muertes:     ${resumen.totalMuertes}`);
+  console.log(`  Total asistencias: ${resumen.totalAsistencias}`);
+  console.log(`  K/D del equipo:    ${resumen.kdEquipo}`);
+  console.log(`  MVP:               ${resumen.mvp}`);
+  console.log('═══════════════════════════════════════════\n');
+}
+
+function resolverEjercicio(datos = jugadores) {
+  validarDatos(datos);
+  const enriquecidos = enriquecerJugadores(datos);
+  const ranking      = ordenarPorKD(enriquecidos);
+  const resumen      = calcularResumen(enriquecidos);
+
+  mostrarRanking(ranking);
+  mostrarResumen(resumen);
+}
+
+
+console.log('\n=== CASO 1: Datos normales ===');
+resolverEjercicio();
+
+console.log('\n=== CASO 2: Squad pequeña ===');
+resolverEjercicio([
+  { id: 1, nombre: 'Snake',  bajas: 100, muertes: 5,  asistencias: 20 },
+  { id: 2, nombre: 'Raiden', bajas: 40,  muertes: 40, asistencias: 10 },
+]);
+
+console.log('\n=== CASO 3: Arreglo vacío (manejo de error) ===');
+try {
+  resolverEjercicio([]);
+} catch (e) {
+  console.error('Error capturado:', e.message);
+}
