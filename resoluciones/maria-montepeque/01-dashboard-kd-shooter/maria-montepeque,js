@@ -96,14 +96,18 @@ function resolverEjercicio(datos = jugadoresIniciales) {
   mostrarResumen(resumen);
 }
 
+
+
 console.log('\n=== CASO 1: Datos normales ===');
 resolverEjercicio();
+
 
 console.log('\n=== CASO 2: Squad pequeña ===');
 resolverEjercicio([
   { id: 1, nombre: 'Snake',  bajas: 100, muertes: 5,  asistencias: 20 },
   { id: 2, nombre: 'Raiden', bajas: 40,  muertes: 40, asistencias: 10 },
 ]);
+
 
 console.log('\n=== CASO 3: Arreglo vacío (manejo de error) ===');
 try {
