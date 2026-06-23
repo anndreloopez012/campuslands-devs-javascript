@@ -1,11 +1,9 @@
-// 01. Dashboard K/D de squad shooter
-
-const jugadores = [
-  { id: 1, nombre: 'Alpha',   bajas: 45, muertes: 10, asistencias: 8  },
-  { id: 2, nombre: 'Bravo',   bajas: 30, muertes: 15, asistencias: 12 },
-  { id: 3, nombre: 'Charlie', bajas: 20, muertes: 20, asistencias: 5  },
-  { id: 4, nombre: 'Delta',   bajas: 55, muertes: 8,  asistencias: 15 },
-  { id: 5, nombre: 'Echo',    bajas: 0,  muertes: 0,  asistencias: 0  }, 
+const jugadoresIniciales = [
+  { id: 1, nombre: 'Alpha',    bajas: 45, muertes: 10, asistencias: 8  },
+  { id: 2, nombre: 'Bravo',    bajas: 30, muertes: 15, asistencias: 12 },
+  { id: 3, nombre: 'Charlie',  bajas: 20, muertes: 20, asistencias: 5  },
+  { id: 4, nombre: 'Delta',    bajas: 55, muertes: 8,  asistencias: 15 },
+  { id: 5, nombre: 'Echo',     bajas: 0,  muertes: 0,  asistencias: 0  }, 
 ];
 
 function validarJugador(jugador) {
@@ -21,7 +19,6 @@ function validarDatos(datos) {
     if (!validarJugador(j)) throw new Error(`Jugador en índice ${i} tiene datos incompletos.`);
   });
 }
-
 
 function calcularKD(bajas, muertes) {
   if (muertes === 0) return bajas === 0 ? 0 : bajas;
@@ -43,28 +40,36 @@ function enriquecerJugadores(datos) {
   }));
 }
 
-
 function ordenarPorKD(jugadores) {
   return [...jugadores].sort((a, b) => b.kd - a.kd);
 }
 
-
 function calcularResumen(jugadores) {
-  const totalBajas      = jugadores.reduce((acc, j) => acc + j.bajas, 0);
-  const totalMuertes    = jugadores.reduce((acc, j) => acc + j.muertes, 0);
-  const totalAsistencias = jugadores.reduce((acc, j) => acc + j.asistencias, 0);
-  const kdEquipo        = parseFloat(calcularKD(totalBajas, totalMuertes).toFixed(2));
-  const mvp             = jugadores.reduce((a, b) => (a.kd >= b.kd ? a : b));
+  const totales = jugadores.reduce((acc, j) => {
+    acc.bajas += j.bajas;
+    acc.muertes += j.muertes;
+    acc.asistencias += j.asistencias;
+    return acc;
+  }, { bajas: 0, muertes: 0, asistencias: 0 });
 
-  return { totalBajas, totalMuertes, totalAsistencias, kdEquipo, mvp: mvp.nombre };
+  const kdEquipo = parseFloat(calcularKD(totales.bajas, totales.muertes).toFixed(2));
+  const mvp = jugadores.reduce((a, b) => (a.kd >= b.kd ? a : b));
+
+  return {
+    totalBajas: totales.bajas,
+    totalMuertes: totales.muertes,
+    totalAsistencias: totales.asistencias,
+    kdEquipo,
+    mvp: mvp.nombre
+  };
 }
 
-
-function mostrarRanking(ranking) {
+function mostrarRanking(ranking, kdPromedio) {
   console.log('\n ══════════ RANKING K/D ══════════ ');
   ranking.forEach((j, i) => {
+    const rindeMasQueElEquipo = j.kd >= kdPromedio ? '+' : ' ';
     console.log(
-      `#${i + 1} ${j.nombre.padEnd(10)} | K/D: ${String(j.kd).padStart(5)} | ` +
+      `#${i + 1} [${rindeMasQueElEquipo}] ${j.nombre.padEnd(10)} | K/D: ${String(j.kd).padStart(5)} | ` +
       `Bajas: ${String(j.bajas).padStart(3)} | Muertes: ${String(j.muertes).padStart(3)} | ` +
       `Asistencias: ${String(j.asistencias).padStart(3)} | Participación: ${j.participacion}%`
     );
@@ -81,16 +86,15 @@ function mostrarResumen(resumen) {
   console.log('═══════════════════════════════════════════\n');
 }
 
-function resolverEjercicio(datos = jugadores) {
+function resolverEjercicio(datos = jugadoresIniciales) {
   validarDatos(datos);
   const enriquecidos = enriquecerJugadores(datos);
   const ranking      = ordenarPorKD(enriquecidos);
   const resumen      = calcularResumen(enriquecidos);
 
-  mostrarRanking(ranking);
+  mostrarRanking(ranking, resumen.kdEquipo);
   mostrarResumen(resumen);
 }
-
 
 console.log('\n=== CASO 1: Datos normales ===');
 resolverEjercicio();
