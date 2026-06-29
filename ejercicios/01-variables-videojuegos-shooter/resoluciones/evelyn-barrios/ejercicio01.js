@@ -19,3 +19,5 @@ console.log("--- SISTEMA DE COMBATE INICIALIZADO ---");
 console.log(`Mapa: ${MAPA_ACTUAL} | Soldado: ${aliasJugador}`);
 console.log(`Estado Físico: ${saludJugador}% | Balas: ${balasRestantes}/${MUNICION_CARGADOR}`);
 console.log(`XP Acumulada: ${puntosDeExperiencia} | ¿Misión en curso?: ${estaActivo}`);
+
+//---corrección
