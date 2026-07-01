@@ -4,6 +4,8 @@
 console.log("Ejercicio 01: Variables y constantes");
 
 // Escribe tu solucion aqui.
+
+//
 const nombreDelMapa = "Estación Orbital";
 const aliasDelJugador = "Evelyn 'Nova'";
 
@@ -18,3 +20,4 @@ console.log("Jugador: " + aliasDelJugador);
 console.log("Mapa: " + nombreDelMapa);
 console.log("Vida: " + vidaActual + "%");
 console.log("Balas de reserva: " + balasEnReserva);
+
