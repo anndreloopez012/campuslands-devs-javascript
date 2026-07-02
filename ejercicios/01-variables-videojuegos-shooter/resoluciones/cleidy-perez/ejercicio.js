@@ -18,4 +18,5 @@ if (municion == 0 && vida){
     estado="muerto";
     console.log("El jugdor esta muerto, fin del juego")
 }else {
-    console.log("Sigue jugando, tienes vida y municion para combatir")
+    console.log("Sigue jugando, tienes vida y municion para combatir");
+}
