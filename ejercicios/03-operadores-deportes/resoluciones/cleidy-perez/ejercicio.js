@@ -38,5 +38,6 @@ function calcularEstadisticaDeportiva(equipos){
     console.log(modulo);
 
 }
+calcularEstadisticaDeportiva(equiposDeFutbol);
 
 
