@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f5f2;
+  color: #2b2b2b;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+#formulario-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd6cb;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px 0;
+}
+
+#formulario-filtros select,
+#formulario-filtros input {
+  padding: 6px 8px;
+  border: 1px solid #ccc0aa;
+  border-radius: 4px;
+}
+
+#contador-resultados {
+  font-weight: bold;
+}
+
+#resumen-precios {
+  color: #6b5c45;
+  margin-bottom: 12px;
+}
+
+#lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.producto {
+  background-color: #ffffff;
+  border: 1px solid #ddd6cb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.producto h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.producto p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.producto .precio {
+  font-weight: bold;
+  color: #a15c1e;
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  color: #a33;
+  font-style: italic;
+}

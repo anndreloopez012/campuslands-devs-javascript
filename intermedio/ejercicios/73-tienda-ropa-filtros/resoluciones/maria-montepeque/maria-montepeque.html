@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>73. Tienda de ropa con filtros</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Tienda de ropa</h1>
+  <p>Combina los filtros para encontrar lo que buscas.</p>
+
+  <form id="formulario-filtros">
+    <select name="categoria">
+      <option value="todas">Todas las categorias</option>
+      <option value="camisetas">Camisetas</option>
+      <option value="pantalones">Pantalones</option>
+      <option value="chaquetas">Chaquetas</option>
+      <option value="vestidos">Vestidos</option>
+    </select>
+
+    <select name="talla">
+      <option value="todas">Todas las tallas</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+    </select>
+
+    <select name="color">
+      <option value="todos">Todos los colores</option>
+      <option value="blanco">Blanco</option>
+      <option value="negro">Negro</option>
+      <option value="azul">Azul</option>
+      <option value="rojo">Rojo</option>
+      <option value="verde">Verde</option>
+    </select>
+
+    <input type="number" name="precioMaximo" placeholder="Precio maximo" min="0" />
+
+    <select name="orden">
+      <option value="ninguno">Sin orden</option>
+      <option value="asc">Precio: menor a mayor</option>
+      <option value="desc">Precio: mayor a menor</option>
+    </select>
+  </form>
+
+  <p id="contador-resultados"></p>
+  <p id="resumen-precios"></p>
+  <div id="lista-productos"></div>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
