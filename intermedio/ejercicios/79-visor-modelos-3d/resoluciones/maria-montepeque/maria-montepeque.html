@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>79. Visor de assets 3D</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Visor de assets 3D</h1>
+  <p>Filtra por etapa y departamento. Solo se aprueba un asset al 100% de progreso.</p>
+
+  <div id="filtros">
+    <select id="filtro-etapa">
+      <option value="todas">Todas las etapas</option>
+      <option value="modelado">Modelado</option>
+      <option value="rigging">Rigging</option>
+      <option value="texturizado">Texturizado</option>
+      <option value="render">Render</option>
+    </select>
+
+    <select id="filtro-departamento">
+      <option value="todos">Todos los departamentos</option>
+      <option value="personajes">Personajes</option>
+      <option value="entorno">Entorno</option>
+      <option value="props">Props</option>
+    </select>
+  </div>
+
+  <p id="resumen-produccion"></p>
+  <p id="mensaje-estado" class="mensaje"></p>
+  <div id="lista-assets"></div>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>

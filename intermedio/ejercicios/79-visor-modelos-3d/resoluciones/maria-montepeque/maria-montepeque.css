@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #181a20;
+  color: #e6e6f0;
+  padding: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+#filtros {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+#filtros select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #3d4152;
+  background-color: #23262f;
+  color: #e6e6f0;
+}
+
+#resumen-produccion {
+  font-weight: bold;
+  color: #8ecae6;
+  margin-bottom: 12px;
+}
+
+#lista-assets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.asset {
+  background-color: #23262f;
+  border: 1px solid #3d4152;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.asset h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.asset p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #a8adba;
+}
+
+.barra-progreso {
+  background-color: #3d4152;
+  border-radius: 4px;
+  height: 8px;
+  margin: 6px 0 2px;
+  overflow: hidden;
+}
+
+.relleno {
+  background-color: #8ecae6;
+  height: 100%;
+}
+
+.porcentaje {
+  font-weight: bold;
+  color: #e6e6f0 !important;
+}
+
+.asset button {
+  margin-top: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #52b788;
+  color: #0d1b12;
+  font-weight: bold;
+}
+
+.asset button:disabled {
+  background-color: #3d4152;
+  color: #7a7f8c;
+  cursor: not-allowed;
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  color: #e07a7a;
+  font-style: italic;
+}
+
+.mensaje {
+  min-height: 18px;
+  font-weight: bold;
+}
+
+.mensaje.error {
+  color: #e07a7a;
+}
