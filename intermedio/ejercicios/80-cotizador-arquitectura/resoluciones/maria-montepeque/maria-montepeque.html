@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>80. Cotizador arquitectura 3D</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Cotizador de render arquitectonico</h1>
+  <p>Completa los datos del proyecto para ver el detalle del precio.</p>
+
+  <form id="formulario-cotizacion">
+    <input type="number" name="m2" placeholder="Metros cuadrados" min="1" required />
+    <input type="number" name="vistas" placeholder="Numero de vistas" min="1" required />
+    <select name="calidad">
+      <option value="estandar">Calidad estandar</option>
+      <option value="premium">Calidad premium</option>
+      <option value="ultra">Calidad ultra</option>
+    </select>
+    <select name="urgencia">
+      <option value="normal">Entrega normal</option>
+      <option value="urgente">Entrega urgente (+25%)</option>
+      <option value="express">Entrega express (+50%)</option>
+    </select>
+    <button type="submit">Calcular cotizacion</button>
+  </form>
+
+  <div id="resumen-cotizacion"></div>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
