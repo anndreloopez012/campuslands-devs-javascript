@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>69. Reservas de cine DOM</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #14141c;
+      color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+    }
+
+    .pantalla {
+      width: 60%;
+      max-width: 420px;
+      height: 14px;
+      margin: 16px 0 28px;
+      background: linear-gradient(to bottom, #ffffff, #666666);
+      border-radius: 4px;
+      text-align: center;
+      font-size: 12px;
+      color: #14141c;
+    }
+
+    #mapa-asientos {
+      display: grid;
+      grid-template-columns: repeat(8, 40px);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .asiento {
+      width: 40px;
+      height: 36px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .asiento.vip.disponible {
+      background-color: #ffcc00;
+    }
+
+    .asiento.general.disponible {
+      background-color: #4caf50;
+      color: #fff;
+    }
+
+    .asiento.ocupado {
+      background-color: #555555;
+      color: #999999;
+      cursor: not-allowed;
+    }
+
+    .asiento.seleccionado {
+      outline: 3px solid #ffffff;
+    }
+
+    #resumen-seleccion,
+    #total-a-pagar {
+      margin: 4px 0;
+    }
+
+    #boton-reservar {
+      margin-top: 12px;
+      padding: 10px 20px;
+      background-color: #e50914;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .mensaje {
+      margin-top: 14px;
+      font-weight: bold;
+    }
+
+    .mensaje.exito {
+      color: #4caf50;
+    }
+
+    .mensaje.error {
+      color: #ff5555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reservas de cine</h1>
+  <p>VIP (filas A y B) $25.000 · General (filas C y D) $18.000 · 10% de descuento desde 4 boletas.</p>
+  <div class="pantalla">PANTALLA</div>
+
+  <div id="mapa-asientos"></div>
+
+  <p id="resumen-seleccion">Ningun asiento seleccionado todavia.</p>
+  <p id="total-a-pagar">Total a pagar: $0</p>
+  <button id="boton-reservar" type="button">Confirmar reserva</button>
+  <p id="mensaje-estado" class="mensaje"></p>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
