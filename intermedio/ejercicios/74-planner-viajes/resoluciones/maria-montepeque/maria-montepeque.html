@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>74. Planner de viajes DOM</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Planner de viajes</h1>
+  <p>Organiza tus actividades por dia y controla el presupuesto ($150.000 diarios).</p>
+
+  <form id="formulario-actividad">
+    <input type="text" name="nombre" placeholder="Actividad" required />
+    <input type="number" name="dia" placeholder="Dia" min="1" required />
+    <input type="number" name="costo" placeholder="Costo" min="0" required />
+    <select name="prioridad">
+      <option value="alta">Alta</option>
+      <option value="media" selected>Media</option>
+      <option value="baja">Baja</option>
+    </select>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <p id="resumen-viaje"></p>
+  <div id="itinerario"></div>
+  <p id="mensaje-estado" class="mensaje"></p>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
