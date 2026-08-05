@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>71. Biblioteca con localStorage</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f1e8;
+      color: #2c2418;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+    }
+
+    p.subtitulo {
+      margin-top: 0;
+      color: #5a4d3a;
+    }
+
+    #formulario-libro {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+      width: 100%;
+      max-width: 560px;
+    }
+
+    #formulario-libro input {
+      flex: 1;
+      min-width: 120px;
+      padding: 8px;
+      border: 1px solid #ada18c;
+      border-radius: 4px;
+    }
+
+    #formulario-libro button {
+      padding: 8px 16px;
+      background-color: #6b4226;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .filtros {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .filtros button {
+      padding: 6px 12px;
+      border: 1px solid #6b4226;
+      background-color: transparent;
+      color: #6b4226;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .filtros button.activo {
+      background-color: #6b4226;
+      color: #fff;
+    }
+
+    #lista-libros {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      max-width: 560px;
+    }
+
+    .libro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      background-color: #fffdf8;
+      border: 1px solid #ada18c;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+    }
+
+    .libro span {
+      flex: 1;
+    }
+
+    #resumen-biblioteca {
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .mensaje {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .mensaje.exito {
+      color: #2e7d32;
+    }
+
+    .mensaje.error {
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi biblioteca</h1>
+  <p class="subtitulo">Los libros se guardan en localStorage: si recargas la pagina, siguen ahi.</p>
+
+  <form id="formulario-libro">
+    <input type="text" name="titulo" placeholder="Titulo" required />
+    <input type="text" name="autor" placeholder="Autor" required />
+    <input type="number" name="anio" placeholder="Anio" required />
+    <button type="submit">Agregar libro</button>
+  </form>
+
+  <div class="filtros">
+    <button type="button" data-estado="todos" class="activo">Todos</button>
+    <button type="button" data-estado="pendiente">Pendiente</button>
+    <button type="button" data-estado="leyendo">Leyendo</button>
+    <button type="button" data-estado="leido">Leido</button>
+  </div>
+
+  <p id="resumen-biblioteca"></p>
+  <ul id="lista-libros"></ul>
+  <p id="mensaje-estado" class="mensaje"></p>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
