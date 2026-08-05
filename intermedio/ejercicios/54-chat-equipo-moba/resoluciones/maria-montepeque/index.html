@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat de equipo MOBA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="chat">
+    <h1>Chat de equipo</h1>
+    <ul id="chat-mensajes"></ul>
+    <form id="chat-formulario">
+      <input id="chat-autor" type="text" placeholder="Tu nombre" required>
+      <select id="chat-rol">
+        <option value="top">Top</option>
+        <option value="jungla">Jungla</option>
+        <option value="medio">Medio</option>
+        <option value="tirador">Tirador</option>
+        <option value="soporte">Soporte</option>
+      </select>
+      <input id="chat-texto" type="text" placeholder="Mensaje de estrategia" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <script src="maria-montepeque.js"></script>
+</body>
+</html>
