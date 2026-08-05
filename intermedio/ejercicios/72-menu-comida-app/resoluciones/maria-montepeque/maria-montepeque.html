@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>72. Menu interactivo comida</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fff8f0;
+      color: #3a2a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+    }
+
+    .contenido {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    #lista-menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      flex: 2;
+    }
+
+    .producto {
+      background-color: #ffffff;
+      border: 1px solid #e0c8a8;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .producto h3 {
+      margin: 4px 0;
+      font-size: 15px;
+    }
+
+    .producto p {
+      margin: 4px 0 8px;
+      color: #6b4a2c;
+      font-size: 13px;
+    }
+
+    .producto button {
+      background-color: #ff7a30;
+      color: #fff;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #panel-carrito {
+      flex: 1;
+      min-width: 260px;
+      background-color: #ffffff;
+      border: 1px solid #e0c8a8;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    #lista-carrito {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+    }
+
+    .item-carrito {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0e0cc;
+      padding: 6px 0;
+      font-size: 13px;
+    }
+
+    .item-carrito button {
+      background-color: #e0c8a8;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 2px 8px;
+    }
+
+    #resumen-carrito {
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .mensaje {
+      margin-top: 8px;
+      font-weight: bold;
+      min-height: 16px;
+    }
+
+    .mensaje.error {
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menu del dia</h1>
+  <p>Agrega productos al carrito y ajusta las cantidades.</p>
+
+  <div class="contenido">
+    <div id="lista-menu"></div>
+
+    <div id="panel-carrito">
+      <h2>Tu carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="resumen-carrito"></p>
+      <p id="mensaje-estado" class="mensaje"></p>
+    </div>
+  </div>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
