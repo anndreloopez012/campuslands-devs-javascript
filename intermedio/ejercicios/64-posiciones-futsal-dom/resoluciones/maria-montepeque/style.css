@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  background-color: #10131a;
+  color: #eef1f7;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.torneo {
+  width: min(520px, 100%);
+}
+
+#tabla-posiciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 1rem 0;
+}
+
+.fila-tabla {
+  background-color: #1c2130;
+  border-left: 3px solid #4c9aff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#form-resultado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#form-resultado select,
+#form-resultado input,
+#form-resultado button {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #2f3648;
+  background-color: #1c2130;
+  color: inherit;
+}
+
+#form-resultado input {
+  width: 90px;
+}
+
+#form-resultado button {
+  background-color: #4c9aff;
+  color: #10131a;
+  cursor: pointer;
+  border: none;
+}
+
+#mensaje-estado {
+  font-size: 0.9rem;
+  color: #9fb4d4;
+}

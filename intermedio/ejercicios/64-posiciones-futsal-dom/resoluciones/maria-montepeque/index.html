@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabla futsal interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="torneo">
+    <h1>Tabla de posiciones futsal</h1>
+    <div id="tabla-posiciones"></div>
+
+    <form id="form-resultado">
+      <select id="select-local">
+        <option value="Halcones FS">Halcones FS</option>
+        <option value="Titanes FS">Titanes FS</option>
+        <option value="Rayos FS">Rayos FS</option>
+        <option value="Cobras FS">Cobras FS</option>
+      </select>
+      <input id="input-goles-local" type="number" min="0" placeholder="Goles local" required>
+      <span>vs</span>
+      <select id="select-visitante">
+        <option value="Titanes FS">Titanes FS</option>
+        <option value="Halcones FS">Halcones FS</option>
+        <option value="Rayos FS">Rayos FS</option>
+        <option value="Cobras FS">Cobras FS</option>
+      </select>
+      <input id="input-goles-visitante" type="number" min="0" placeholder="Goles visitante" required>
+      <button type="submit">Agregar resultado</button>
+    </form>
+    <p id="mensaje-estado"></p>
+  </main>
+  <script src="maria-montepeque.js"></script>
+</body>
+</html>
