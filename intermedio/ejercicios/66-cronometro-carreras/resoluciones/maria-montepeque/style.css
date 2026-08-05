@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  background-color: #10131a;
+  color: #eef1f7;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cronometro {
+  width: min(400px, 100%);
+  text-align: center;
+}
+
+.botones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.botones button {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #4c9aff;
+  color: #10131a;
+  cursor: pointer;
+}
+
+#historial-vueltas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+#historial-vueltas div {
+  background-color: #1c2130;
+  border-left: 3px solid #4c9aff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
