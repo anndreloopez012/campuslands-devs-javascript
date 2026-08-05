@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  background-color: #10131a;
+  color: #eef1f7;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.marcador-container {
+  text-align: center;
+}
+
+#marcador-actual {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+#sets-info {
+  color: #9fb4d4;
+}
+
+#ganador-info {
+  color: #4cd964;
+  font-weight: bold;
+  min-height: 1.5rem;
+}
+
+.botones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.botones button {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #4c9aff;
+  color: #10131a;
+  cursor: pointer;
+}
