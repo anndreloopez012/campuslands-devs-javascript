@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f6;
+  color: #232323;
+  padding: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+#barra-herramientas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+#barra-herramientas label {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#barra-herramientas button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #495057;
+  color: #fff;
+}
+
+#lienzo {
+  background-color: #ffffff;
+  border: 2px solid #495057;
+  border-radius: 6px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+#resumen-dibujo {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #495057;
+}

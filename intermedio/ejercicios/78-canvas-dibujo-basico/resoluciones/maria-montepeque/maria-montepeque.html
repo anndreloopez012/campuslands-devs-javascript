@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>78. Canvas de dibujo basico</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Mini herramienta de dibujo</h1>
+  <p>Haz click y arrastra sobre el lienzo para dibujar.</p>
+
+  <div id="barra-herramientas">
+    <label>Color <input id="entrada-color" type="color" value="#1c7ed6" /></label>
+    <label>Grosor <input id="entrada-grosor" type="range" min="1" max="50" value="3" /></label>
+    <button id="boton-deshacer" type="button">Deshacer</button>
+    <button id="boton-limpiar" type="button">Limpiar</button>
+  </div>
+
+  <canvas id="lienzo" width="600" height="360"></canvas>
+  <p id="resumen-dibujo"></p>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
