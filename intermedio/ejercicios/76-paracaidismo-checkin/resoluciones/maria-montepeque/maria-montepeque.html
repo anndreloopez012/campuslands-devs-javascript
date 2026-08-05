@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>76. Check-in de salto</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Check-in de salto</h1>
+  <p>Edad minima 18 anios, viento maximo 25 km/h, equipo completo obligatorio.</p>
+
+  <form id="formulario-checkin">
+    <input type="text" name="nombre" placeholder="Nombre del saltador" required />
+    <input type="number" name="edad" placeholder="Edad" min="0" required />
+    <input type="number" name="velocidadViento" placeholder="Velocidad del viento (km/h)" min="0" required />
+
+    <div class="equipo">
+      <label><input type="checkbox" name="casco" /> Casco</label>
+      <label><input type="checkbox" name="arnes" /> Arnes</label>
+      <label><input type="checkbox" name="paracaidasPrincipal" /> Paracaidas principal</label>
+      <label><input type="checkbox" name="paracaidasReserva" /> Paracaidas de reserva</label>
+    </div>
+
+    <button type="submit">Registrar salto</button>
+  </form>
+
+  <p id="resultado-checkin" class="resultado"></p>
+  <p id="resumen-jornada"></p>
+  <ul id="lista-historial"></ul>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>

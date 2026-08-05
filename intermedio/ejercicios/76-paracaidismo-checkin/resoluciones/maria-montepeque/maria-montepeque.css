@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eef2f7;
+  color: #1b2635;
+  padding: 24px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+#formulario-checkin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1px solid #c3cee0;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 16px 0;
+}
+
+#formulario-checkin input[type='text'],
+#formulario-checkin input[type='number'] {
+  padding: 6px 8px;
+  border: 1px solid #9fb0c9;
+  border-radius: 4px;
+}
+
+.equipo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+
+#formulario-checkin button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #d9480f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.resultado {
+  font-weight: bold;
+  min-height: 20px;
+  margin-bottom: 12px;
+}
+
+.resultado--ok {
+  color: #2e7d32;
+}
+
+.resultado--error {
+  color: #c62828;
+}
+
+#resumen-jornada {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#lista-historial {
+  list-style: none;
+  padding: 0;
+}
+
+.registro {
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.registro--aprobado {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+
+.registro--rechazado {
+  background-color: #fdecea;
+  color: #c62828;
+}
