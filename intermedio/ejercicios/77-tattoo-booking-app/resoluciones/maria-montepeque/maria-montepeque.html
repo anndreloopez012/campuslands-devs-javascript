@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>77. Booking tattoo app</title>
+  <link rel="stylesheet" href="./maria-montepeque.css" />
+</head>
+<body>
+  <h1>Reserva tu cita de tatuaje</h1>
+  <p>Elige un artista y un horario disponible, luego confirma con tu nombre.</p>
+
+  <div id="lista-artistas"></div>
+  <p id="seleccion-actual"></p>
+
+  <form id="formulario-reserva">
+    <input type="text" name="cliente" placeholder="Tu nombre" required />
+    <button type="submit">Confirmar reserva</button>
+  </form>
+  <p id="mensaje-estado" class="mensaje"></p>
+
+  <h2>Agenda del dia</h2>
+  <ul id="lista-agenda"></ul>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
