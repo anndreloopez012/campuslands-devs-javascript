@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>70. Terminal sci-fi</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #050b0a;
+      color: #33ff66;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+    }
+
+    h1 {
+      margin-bottom: 4px;
+      text-shadow: 0 0 6px #33ff66;
+    }
+
+    p.subtitulo {
+      color: #7fffb0;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    #log-terminal {
+      width: 100%;
+      max-width: 640px;
+      height: 360px;
+      overflow-y: auto;
+      background-color: #010402;
+      border: 1px solid #33ff66;
+      border-radius: 6px;
+      padding: 12px;
+      box-shadow: 0 0 12px rgba(51, 255, 102, 0.35);
+      white-space: pre-wrap;
+    }
+
+    #log-terminal p {
+      margin: 4px 0;
+    }
+
+    .comando {
+      color: #ffffff;
+    }
+
+    .respuesta {
+      color: #33ff66;
+    }
+
+    .sistema {
+      color: #7fffb0;
+      font-style: italic;
+    }
+
+    .error {
+      color: #ff5555;
+    }
+
+    #formulario-comando {
+      width: 100%;
+      max-width: 640px;
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    #entrada-comando {
+      flex: 1;
+      background-color: #010402;
+      border: 1px solid #33ff66;
+      color: #33ff66;
+      font-family: inherit;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    #entrada-comando:disabled {
+      opacity: 0.5;
+    }
+
+    button {
+      background-color: #33ff66;
+      color: #010402;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Terminal de la nave</h1>
+  <p class="subtitulo">Comandos: ayuda, mirar, ir &lt;direccion&gt;, tomar &lt;objeto&gt;, inventario, escanear, historial, salir</p>
+
+  <div id="log-terminal"></div>
+
+  <form id="formulario-comando">
+    <input
+      id="entrada-comando"
+      type="text"
+      autocomplete="off"
+      placeholder="Escribe un comando, ej: ir sur"
+    />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="./maria-montepeque.js"></script>
+</body>
+</html>
