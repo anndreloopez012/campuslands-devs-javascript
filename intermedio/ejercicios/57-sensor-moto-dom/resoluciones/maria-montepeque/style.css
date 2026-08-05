@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+  background-color: #0f1115;
+  color: #eef1f7;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.panel-container {
+  width: min(500px, 100%);
+}
+
+#panel-sensores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.tarjeta-sensor {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #2f3648;
+}
+
+.tarjeta-sensor.normal {
+  background-color: #16321f;
+  border-color: #2f8a4b;
+}
+
+.tarjeta-sensor.alerta {
+  background-color: #3a1a1a;
+  border-color: #d9534f;
+}
+
+.tarjeta-sensor h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.tarjeta-sensor p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#simular-lectura {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #4c9aff;
+  color: #10131a;
+  cursor: pointer;
+}
